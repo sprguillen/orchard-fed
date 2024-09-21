@@ -1,9 +1,37 @@
+import { useState } from 'react';
 import MainSection from '../MainSection';
-import Image1 from '../../assets/MainBlock/Image-01.jpg';
-import Image2 from '../../assets/MainBlock/Image-02.jpg';
-import Image3 from '../../assets/MainBlock/Image-03.jpg';
+import Modal from '../Modal';
+import Image1 from '../../assets/MainArticle/Image-01.jpg';
+import Image1Larger from '../../assets/MainArticle/Image-01@2x.jpg';
+import Image2 from '../../assets/MainArticle/Image-02.jpg';
+import Image2Larger from '../../assets/MainArticle/Image-02@2x.jpg';
+import Image3 from '../../assets/MainArticle/Image-03.jpg';
+import Image3Larger from '../../assets/MainArticle/Image-03@2x.jpg';
+
+const IMAGE_1 = 'image1';
+const IMAGE_2 = 'image2';
+const IMAGE_3 = 'image3';
 
 function MainBlock () {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+  
+  function openImageModal (imageName) {
+    if (imageName === IMAGE_1) {
+      setModalImage(Image1Larger);
+    } else if (imageName === IMAGE_2) {
+      setModalImage(Image2Larger);
+    } else if (imageName === IMAGE_3) {
+      setModalImage(Image3Larger);
+    }
+
+    setIsOpen(true);
+  }
+
+  function closeImageModal () {
+    setIsOpen(false);
+  }
+
   return (
     <main className="mt-[150px] px-2 py-1">
       <article className="flex">
@@ -11,15 +39,30 @@ function MainBlock () {
           <div className="grid grid-cols-2 gap-6">
             <div className="grid">
               <div>
-                <img className="h-auto max-w-full" src={Image1} alt="Image 1" />
+                <img
+                  className="h-auto max-w-full cursor-pointer"
+                  src={Image1}
+                  alt="Image 1"
+                  onClick={() => openImageModal(IMAGE_1)}
+                />
               </div>
             </div>
             <div className="grid gap-5">
               <div>
-                <img className="h-auto max-w-full" src={Image2} alt="Image 2" />
+                <img
+                  className="h-auto max-w-full"
+                  src={Image2}
+                  alt="Image 2"
+                  onClick={() => openImageModal(IMAGE_2)}
+                />
               </div>
               <div>
-                <img className="h-auto max-w-full" src={Image3} alt="Image 3" />
+                <img
+                  className="h-auto max-w-full"
+                  src={Image3}
+                  alt="Image 3"
+                  onClick={() => openImageModal(IMAGE_3)}
+                />
               </div>
             </div>
           </div>
@@ -43,6 +86,9 @@ function MainBlock () {
         </div>
       </article>
       <MainSection />
+      <Modal isOpen={isOpen} onClose={closeImageModal}>
+        <img src={modalImage} alt="Modal Image" />
+      </Modal>
     </main>
   )
 }

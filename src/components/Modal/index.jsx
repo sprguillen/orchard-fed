@@ -10,10 +10,14 @@ function Modal (props) {
   return ReactDOM.createPortal(
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
-        <button className={styles.closeButton} onClick={onClose}>
-          &times;
-        </button>
-        {children}
+        <div className="p-4">
+          <span className={styles.closeButton} onClick={onClose}>
+            &times;
+          </span>
+        </div>
+        <div className="flex item-center justify-center p-4">
+          {children}
+        </div>
       </div>
     </div>,
     document.getElementById('modal-root')
@@ -21,7 +25,7 @@ function Modal (props) {
 }
 
 Modal.propTypes = {
-  isOpen: PropTypes.boolean.isRequired,
+  isOpen: PropTypes.boolean,
   onClose: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired, 
 }
