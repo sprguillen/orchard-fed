@@ -1,0 +1,13 @@
+.customLink {
+  color: white;
+}
+
+.customLink::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  background-color: red;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}

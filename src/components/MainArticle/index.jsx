@@ -1,7 +1,7 @@
-import MainSection from './MainSection';
-import Image1 from '../assets/MainBlock/Image-01.jpg';
-import Image2 from '../assets/MainBlock/Image-02.jpg';
-import Image3 from '../assets/MainBlock/Image-03.jpg';
+import MainSection from '../MainSection';
+import Image1 from '../../assets/MainBlock/Image-01.jpg';
+import Image2 from '../../assets/MainBlock/Image-02.jpg';
+import Image3 from '../../assets/MainBlock/Image-03.jpg';
 
 function MainBlock () {
   return (

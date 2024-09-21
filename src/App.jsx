@@ -1,10 +1,10 @@
 import './App.css'
-import MainBlock from './components/MainBlock';
+import MainArticle from './components/MainArticle';
 
 function App() {
   return (
     <>
-      <MainBlock />
+      <MainArticle />
     </>
   )
 }
