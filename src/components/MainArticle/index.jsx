@@ -34,9 +34,9 @@ function MainBlock () {
 
   return (
     <main className="mt-[150px] px-2 py-1">
-      <article className="flex">
+      <article className="flex flex-col md:flex-row items-center md:items-start">
         <div className="flex-none">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
             <div className="grid">
               <div>
                 <img
@@ -67,7 +67,7 @@ function MainBlock () {
             </div>
           </div>
         </div>
-        <div className="flex-none px-6 w-[432px] text-left">
+        <div className="flex-none px-6 w-[432px] text-left mt-10 md:mt-0">
           <h2 className="text-[1.66rem] font-light mb-2">ANSWER YOUR BODY&apos;S NEEDS</h2>
           <hr />
           <p className="mt-7 mb-11 leading-[1.9rem] font-extralight text-[18px] text-gray-200">

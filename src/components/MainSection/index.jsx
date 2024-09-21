@@ -7,7 +7,7 @@ function MainSection () {
   return (
     <section className="mt-[240px]">
       <h1 className="text-[42px] font-light">ALL THE LATEST FROM AEG</h1>
-      <div className="grid grid-cols-3 mt-[60px] gap-5">
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 mt-[60px] gap-y-20 gap-x-5 md:gap-y-0 justify-center md:justify-start">
         <Section
           image={Image1}
           headerText={'Summer Lunch Menu by Mark Best'}
