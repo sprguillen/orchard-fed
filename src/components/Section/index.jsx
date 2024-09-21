@@ -10,7 +10,7 @@ function Section (props) {
         <img src={image} alt="" />
       </div>
       <h2 className="mt-6 font-medium text-[18px]">{headerText}</h2>
-      <p className="mt-4 mb-6 text-neutral-400 leading-7 text-[16px]">
+      <p className="mt-4 mb-6 text-neutral-400 leading-7 text-[14.9px]">
         {text}
       </p>
       <a className={styles.customLink} href="#">READ MORE</a>
@@ -24,4 +24,4 @@ Section.propTypes = {
   text: PropTypes.string.isRequired,
 }
 
-export default Section
+export default Section;

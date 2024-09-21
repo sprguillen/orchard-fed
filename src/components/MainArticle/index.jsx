@@ -47,4 +47,4 @@ function MainBlock () {
   )
 }
 
-export default MainBlock
+export default MainBlock;
