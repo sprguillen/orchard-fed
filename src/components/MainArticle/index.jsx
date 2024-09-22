@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MainSection from '../MainSection';
 import Modal from '../Modal';
 import Image1 from '../../assets/MainArticle/Image-01.jpg';
@@ -15,6 +15,11 @@ const IMAGE_3 = 'image3';
 function MainBlock () {
   const [isOpen, setIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   
   function openImageModal (imageName) {
     if (imageName === IMAGE_1) {
@@ -33,7 +38,7 @@ function MainBlock () {
   }
 
   return (
-    <main className="mt-[150px] px-2 py-1">
+    <main className={`mt-[150px] px-2 py-1 main-article ${isMounted ? 'fade-in': ''}`}>
       <article className="flex flex-col md:flex-row items-center md:items-start">
         <div className="flex-none">
           <div className="grid grid-cols-1 md:grid-cols-2  gap-6">

@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.main-article {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
