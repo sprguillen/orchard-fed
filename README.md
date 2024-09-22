@@ -1,8 +1,11 @@
-# React + Vite
+# Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a test project Simon Guillen wrote for his Filta Job Application.
 
-Currently, two official plugins are available:
+# Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To set up the project just run `npm install` then `npm run dev`.
+
+# Frameworks used
+
+This project uses **ReactJS**, which is installed via *Vite* and **TailwindCSS**, to design the app. I think it's the easiest to make a component-based app with a clean design and minimal manual CSS implementation that takes responsiveness into account.
