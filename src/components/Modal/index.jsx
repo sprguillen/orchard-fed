@@ -10,12 +10,12 @@ function Modal (props) {
   return ReactDOM.createPortal(
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
-        <div className="p-4">
+        <div>
           <span className={styles.closeButton} onClick={onClose}>
             &times;
           </span>
         </div>
-        <div className="flex item-center justify-center p-4">
+        <div>
           {children}
         </div>
       </div>
@@ -25,9 +25,9 @@ function Modal (props) {
 }
 
 Modal.propTypes = {
-  isOpen: PropTypes.boolean,
   onClose: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired, 
+  children: PropTypes.node.isRequired,
+  isOpen: PropTypes.boolean,
 }
 
 export default Modal;
